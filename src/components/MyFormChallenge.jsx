@@ -1,14 +1,9 @@
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import BoxColor from "./BoxColor";
 
 function MyForm() {
   const colors = ['red', 'green', 'pink', 'yellow', 'purple', 'white', 'blue', 'aqua', 'olive'];
-  const [color, setColor] = useState('');
-  const inputRef = useRef(null);
-
-  useEffect(() => {
-    inputRef.current.focus();
-  }, []);
+  const [inputValue, setInputValue] = useState('');
 
   return (
     <>
@@ -16,18 +11,16 @@ function MyForm() {
         id="color"
         type="text"
         placeholder="añade el color"
-        className=""
-        onChange={() => setColor(inputRef.current.value)}
-        value={color}
-        ref={inputRef}
+        onChange={(e) => setInputValue(e.target.value.toLocaleLowerCase())}
+        value={inputValue}
       />
       <div className="container">
-        {colors.map((c) => {
+        {colors.map((color) => {
             return (
               <BoxColor
-                key={c}
-                color={c}
-                value={color}
+                key={color}
+                color={color}
+                value={inputValue}
               />
             )
         })}
