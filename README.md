@@ -38,7 +38,7 @@ Como siempre en `App.jsx` pondremos nuestra aplicación
 
 ## PISTAS
 - Usa el array de colores... seguro que tiene más de un uso
-- Accede a la clase de cada `BoxColor` y compara ese atributo con el valor que nos da el input para poder cambiar ese color y texto. El aspecto del `className` cada box podría tener un aspecto similar a esto:
+- Accede a la clase de cada `BoxColor` y compara ese atributo con el valor que nos da el input para poder cambiar ese color y texto. El aspecto del `className` de cada box podría tener un aspecto similar a esto:
 
 ```js 
 className={`box ${color}`}

@@ -24,8 +24,7 @@ function MyForm() {
               />
             )
         })}
-      </div>
-      
+      </div>    
     </>
   );
 }
